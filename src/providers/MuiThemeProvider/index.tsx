@@ -15,9 +15,11 @@ let theme = createTheme({
 
 theme = responsiveFontSizes(theme);
 
-export const MuiThemeProvider = ({ children }: { children: React.ReactNode }) => (
+const MuiThemeProvider = ({ children }: { children: React.ReactNode }) => (
   <ThemeProvider theme={theme}>
     <CssBaseline />
     {children}
   </ThemeProvider>
 );
+
+export { theme, MuiThemeProvider };
