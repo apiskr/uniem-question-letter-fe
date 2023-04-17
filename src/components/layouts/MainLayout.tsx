@@ -64,4 +64,4 @@ const MainCta = ({ children }: Props) => {
   );
 };
 
-export const PageLayout = Object.assign(Main, { Absolute, Body, MainCta });
+export const MainLayout = Object.assign(Main, { Absolute, Body, MainCta });
