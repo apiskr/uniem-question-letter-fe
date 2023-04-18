@@ -35,7 +35,7 @@ export default function Home() {
             }}
           >
             <Image src={billboard} alt="none" layout="fill" />
-            <p
+            <div
               style={{
                 position: "absolute",
                 fontWeight: 800,
@@ -45,7 +45,7 @@ export default function Home() {
               }}
             >
               어려운 대학공부,<br></br>유니음에서 찾다
-            </p>
+            </div>
           </div>
           {/* 기능1 */}
           <div
@@ -67,7 +67,7 @@ export default function Home() {
                 height: "100%",
               }}
             >
-              <p
+              <div
                 style={{
                   // Headline2
                   fontWeight: 800,
@@ -78,11 +78,11 @@ export default function Home() {
                 }}
               >
                 시험공부, <br></br> 이미 A+ 받은 선배에게<br></br> 물어보세요
-              </p>
+              </div>
               <Empty height="30px" />
               <Image src={feature1} width="250" alt="none" />
               <Empty height="30px" />
-              <p
+              <div
                 style={{
                   margin: "0",
 
@@ -94,7 +94,7 @@ export default function Home() {
                 과목 관련 질문을 하면 <br></br>
                 가장 잘 알고 있는 선배 멘토에게<br></br>
                 답변 받을 수 있습니다.
-              </p>
+              </div>
             </div>
           </div>
 
@@ -118,7 +118,7 @@ export default function Home() {
                 height: "657px",
               }}
             >
-              <p
+              <div
                 style={{
                   fontWeight: 800,
                   fontSize: 24,
@@ -128,9 +128,9 @@ export default function Home() {
                 }}
               >
                 내가 배운 지식, <br></br>후배에게 원데이 클래스
-              </p>
+              </div>
               <Empty height="11px" />
-              <p
+              <div
                 style={{
                   margin: "0",
                   // body1
@@ -139,7 +139,7 @@ export default function Home() {
                 }}
               >
                 역량 있는 멘토님들의<br></br> 원데이 클래스를 지원해드립니다.
-              </p>
+              </div>
             </div>
           </div>
           {/* 회원가입 섹션 */}
@@ -155,7 +155,7 @@ export default function Home() {
               background: "#F9F9F9",
             }}
           >
-            <p
+            <div
               style={{
                 // Headline 1
                 fontWeight: 800,
@@ -168,7 +168,7 @@ export default function Home() {
             >
               대학생 지식 공유 플랫폼,<br></br>
               유니음
-            </p>
+            </div>
             <Empty height="2rem" />
             {/* 버튼 */}
             <Image src={kakao_login_large_wide} width="300" alt="none" />
