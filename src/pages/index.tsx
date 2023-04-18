@@ -29,7 +29,12 @@ export default function Home() {
               alignSelf: "stretch",
             }}
           >
-            <Image src={billboard} alt="none" layout="fill" />
+            <Image
+              src={billboard}
+              alt="none"
+              fill
+              sizes="(max-width:768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            />
             <div
               style={{
                 position: "absolute",
