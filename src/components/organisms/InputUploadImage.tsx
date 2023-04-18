@@ -55,6 +55,7 @@ const UploadUI = ({ file }: { file: File | null }) => {
           whiteSpace: "nowrap",
         }}
       >
+        {/* [Todo] 사진 미리보기 구현하기 */}
         {!file ? "사진 업로드" : `업로드 : ${file.name}`}
       </Typography>
       <Empty height="1rem" />
