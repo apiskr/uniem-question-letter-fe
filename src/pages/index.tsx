@@ -1,8 +1,6 @@
 import React from "react";
 import { MainLayout } from "@/components/layouts/MainLayout";
 import { Stack, TextField, Typography } from "@mui/material";
-import { InputUploadImage } from "@/components/organisms/InputUploadImage";
-import { useWindowScreen } from "@/hooks/useWindowScreen";
 import { Empty } from "@/components/atoms";
 import Image from "next/image";
 import billboard from "/public/billboard.png";
@@ -10,9 +8,6 @@ import feature1 from "/public/feature_1.png";
 import kakao_login_large_wide from "/public/kakao_login_large_wide.png";
 
 export default function Home() {
-  const [uploadedFile, setUploadedFile] = React.useState<File | null>(null);
-  const { screen } = useWindowScreen();
-
   return (
     <MainLayout>
       {/* [Todo] Head 컴포넌트 관리하기 */}
@@ -97,7 +92,6 @@ export default function Home() {
               </div>
             </div>
           </div>
-
           {/* 기능 2 */}
           <div
             style={{
