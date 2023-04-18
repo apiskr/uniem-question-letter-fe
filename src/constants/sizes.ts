@@ -6,5 +6,5 @@ import { breakPoints } from "./breakPoints";
  */
 
 export const sizes = {
-  pageMaxWidth: breakPoints.md - 500,
+  pageMaxWidth: breakPoints.sm,
 };
