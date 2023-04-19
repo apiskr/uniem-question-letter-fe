@@ -17,7 +17,11 @@ export default function Question() {
         <Stack sx={{ width: "90%" }} spacing={2}>
           <Empty height="0.1rem" />
           <Typography variant="h3">질문 내용</Typography>
-          <MainTextField multiline rows={8} placeholder="질문 내용을 입력해주세요." />
+          <MainTextField
+            multiline
+            rows={8}
+            placeholder="질문 내용을 입력해주세요."
+          />
           <InputUploadImage
             screen={windowScreen}
             uploadedFile={uploadedFile}
