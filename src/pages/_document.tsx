@@ -11,6 +11,7 @@ import { AppType, AppProps } from "next/app";
 import { texts } from "@/constants/text";
 import createEmotionCache from "@/providers/EmotionCacheProvider/createEmotionCache";
 import { EmotionCache } from "@emotion/cache";
+import { theme } from "@/providers/MuiThemeProvider";
 
 interface MyDocumentProps extends DocumentProps {
   emotionStyleTags: JSX.Element[];
@@ -74,7 +75,9 @@ MyDocument.getInitialProps = async (ctx: DocumentContext) => {
 
   ctx.renderPage = () =>
     originalRenderPage({
-      enhanceApp: (App: React.ComponentType<React.ComponentProps<AppType> & MyAppProps>) =>
+      enhanceApp: (
+        App: React.ComponentType<React.ComponentProps<AppType> & MyAppProps>
+      ) =>
         function EnhanceApp(props) {
           return <App emotionCache={cache} {...props} />;
         },
