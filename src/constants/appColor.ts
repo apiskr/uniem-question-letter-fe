@@ -17,5 +17,5 @@ export const appColor = {
   inputBackground: originColor.lightPurple1,
   border: originColor.lightPurple2,
   text: originColor.grey3,
-  primary: originColor.greyBlue,
+  primary: originColor.lightPurple2,
 };
