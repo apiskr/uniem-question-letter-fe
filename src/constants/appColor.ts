@@ -6,17 +6,16 @@ const originColor = {
   greyTransparent: "rgb(34,34,34,0.5)",
   white: "#FFFFFF",
   black: "#000000",
-  pastelYellow: "#F3EFE0",
-  turquoise: "#22A39F",
-  blue: "#1932B9",
-  lightBlue: "#7584D5",
   greyBlue: "#4C5A67",
+  lightPurple1: "#F4F4FF",
+  lightPurple2: "#CED5F2",
 };
 
 export const appColor = {
   ...originColor,
-  backGround: originColor.grey1,
-  border: originColor.grey2,
+  backGround: originColor.white,
+  inputBackground: originColor.lightPurple1,
+  border: originColor.lightPurple2,
   text: originColor.grey3,
-  primary: originColor.greyBlue,
+  primary: originColor.lightPurple2,
 };

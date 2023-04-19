@@ -1,32 +1,24 @@
 import React from "react";
 import styled from "@emotion/styled";
-import { getChildrenByName } from "@/lib/utils/getChildrenByName";
-import { isEmpty } from "@/lib/utils/isEmpty";
-import { Empty } from "../atoms";
 import { sizes } from "@/constants/sizes";
+import { MainHeader } from "../organisms/MainHeader";
 
-const Layout = styled("div")({
+const Main = styled("main")({
   display: "flex",
   flexDirection: "column",
   alignItems: "center",
-  maxWidth: sizes.pageMaxWidth,
   margin: "auto",
+  maxWidth: sizes.pageMaxWidth,
 });
 
 type Props = { children: React.ReactNode };
 
-const Main = ({ children }: Props) => {
-  const arrayBodyComponenets = getChildrenByName(children, "Body");
-  const arrayAbsoluteComponenets = getChildrenByName(children, "Absolute");
-  const arrayMainCtaComponenets = getChildrenByName(children, "MainCta");
-
+const Layout = ({ children }: Props) => {
   return (
-    <Layout>
-      {isEmpty(arrayAbsoluteComponenets) || arrayAbsoluteComponenets}
-      {isEmpty(arrayBodyComponenets) || arrayBodyComponenets}
-      <Empty height="2rem" />
-      {isEmpty(arrayMainCtaComponenets) || arrayMainCtaComponenets}
-    </Layout>
+    <>
+      <MainHeader />
+      <Main>{children}</Main>
+    </>
   );
 };
 
@@ -50,18 +42,4 @@ const Body = ({ children }: Props) => {
   return <>{children}</>;
 };
 
-const MainCta = ({ children }: Props) => {
-  return (
-    <div
-      style={{
-        position: "absolute",
-        bottom: 50,
-        zIndex: 1,
-      }}
-    >
-      {children}
-    </div>
-  );
-};
-
-export const MainLayout = Object.assign(Main, { Absolute, Body, MainCta });
+export const MainLayout = Object.assign(Layout, { Absolute, Body });
