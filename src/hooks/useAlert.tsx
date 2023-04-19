@@ -12,10 +12,20 @@ export const useAlert = () => {
   const closeAlert = () => setIsAlertOpen(false);
 
   const Alert = React.useCallback(
-    ({ children, severity = "error" }: { children: React.ReactNode; severity?: AlertColor }) => {
+    ({
+      children,
+      severity = "error",
+    }: {
+      children: React.ReactNode;
+      severity?: AlertColor;
+    }) => {
       if (ref.current && isAlertOpen) {
         return createPortal(
-          <AppAlert isOpen={isAlertOpen} closeAlert={closeAlert} severity={severity}>
+          <AppAlert
+            isOpen={isAlertOpen}
+            closeAlert={closeAlert}
+            severity={severity}
+          >
             {children}
           </AppAlert>,
           ref.current

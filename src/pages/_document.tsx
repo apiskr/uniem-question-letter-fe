@@ -8,7 +8,6 @@ import Document, {
 } from "next/document";
 import createEmotionServer from "@emotion/server/create-instance";
 import { AppType, AppProps } from "next/app";
-import { theme } from "@/providers/MuiThemeProvider";
 import { texts } from "@/constants/text";
 import createEmotionCache from "@/providers/EmotionCacheProvider/createEmotionCache";
 import { EmotionCache } from "@emotion/cache";
