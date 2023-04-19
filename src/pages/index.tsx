@@ -6,6 +6,7 @@ import Image from "next/image";
 import billboard from "/public/billboard.png";
 import feature1 from "/public/feature_1.png";
 import kakao_login_large_wide from "/public/kakao_login_large_wide.png";
+import alt_image from "/public/alt_image.jpeg";
 
 export default function Home() {
   return (
@@ -13,7 +14,7 @@ export default function Home() {
       {/* [Todo] Head 컴포넌트 관리하기 */}
       <MainLayout.Body>
         {/* [Todo] Field 컴포넌트로 빼기 */}
-        <Stack sx={{ width: "90%" }} spacing={2}>
+        <Stack sx={{ width: "100%" }} spacing={2}>
           {/* 빌보드 */}
           <Box
             sx={{
@@ -29,12 +30,7 @@ export default function Home() {
               alignSelf: "stretch",
             }}
           >
-            <Image
-              src={billboard}
-              alt="none"
-              fill
-              sizes="(max-width:768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-            />
+            <Image src={billboard} alt="none" objectFit="cover " fill />
             <Box
               sx={{
                 position: "absolute",
@@ -65,6 +61,7 @@ export default function Home() {
                 flexDirection: "column",
                 alignItems: "flex-start",
                 height: "100%",
+                gap: "20px",
               }}
             >
               <Box
@@ -79,9 +76,6 @@ export default function Home() {
               >
                 시험공부, <br></br> 이미 A+ 받은 선배에게<br></br> 물어보세요
               </Box>
-              <Empty height="30px" />
-              <Image src={feature1} width="250" alt="none" />
-              <Empty height="30px" />
               <Box
                 sx={{
                   margin: "0",
@@ -95,6 +89,8 @@ export default function Home() {
                 가장 잘 알고 있는 선배 멘토에게<br></br>
                 답변 받을 수 있습니다.
               </Box>
+
+              <Image src={feature1} width="250" alt="none" />
             </Box>
           </Box>
           {/* 기능 2 */}
@@ -103,7 +99,7 @@ export default function Home() {
               // FeatureContainer
               display: "flex",
               flexDirection: "column",
-              alignItems: "flex-start",
+              alignItems: "flex-end",
               padding: " 70px 16px",
               backgroundColor: "#ffffff",
               height: "100%",
@@ -113,8 +109,9 @@ export default function Home() {
               sx={{
                 display: "flex",
                 flexDirection: "column",
-                alignItems: "flex-start",
+                alignItems: "flex-end",
                 height: "657px",
+                gap: "20px",
               }}
             >
               <Box
@@ -124,17 +121,19 @@ export default function Home() {
                   lineHeight: "29px",
                   color: "#000000",
                   margin: "0",
+                  textAlign: "right",
                 }}
               >
                 내가 배운 지식, <br></br>후배에게 원데이 클래스
               </Box>
-              <Empty height="11px" />
+              <Image src={alt_image} width="250" alt="none" />
               <Box
                 sx={{
                   margin: "0",
                   // body1
                   fontSize: "15px",
                   lineHeight: "18px",
+                  textAlign: "right",
                 }}
               >
                 역량 있는 멘토님들의<br></br> 원데이 클래스를 지원해드립니다.
@@ -172,17 +171,19 @@ export default function Home() {
             {/* 버튼 */}
             <Image src={kakao_login_large_wide} width="300" alt="none" />
           </Box>
+
           {/* Footer */}
           <Box
             sx={{
               display: "flex",
               flexDirection: "column",
               alignItems: "flex-start",
-              padding: "16px",
-              height: "324px",
-
+              padding: "50px 16px",
+              width: "100%",
+              height: "100%",
               // Gray4
-              background: "#4A4A4A",
+              background: "#000",
+              gap: 2,
             }}
           >
             {/* 유니음 관련 텍스트 */}
@@ -262,9 +263,19 @@ export default function Home() {
               <p
                 style={{
                   margin: "0",
-
                   color: "#ffffff",
-
+                  // body1R
+                  fontSize: "15px",
+                  lineHeight: "18px",
+                  fontWeight: 800,
+                }}
+              >
+                아피스
+              </p>
+              <p
+                style={{
+                  margin: "0",
+                  color: "#ffffff",
                   // body1R
                   fontSize: "15px",
                   lineHeight: "18px",
@@ -325,8 +336,6 @@ export default function Home() {
             </Box>
           </Box>
         </Stack>
-        <Empty height="2rem" />
-        <Stack sx={{ width: "90%" }} spacing={2}></Stack>
       </MainLayout.Body>
     </MainLayout>
   );
