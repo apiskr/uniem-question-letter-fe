@@ -1,7 +1,5 @@
 import React from "react";
 import styled from "@emotion/styled";
-import { getChildrenByName } from "@/lib/utils/getChildrenByName";
-import { isEmpty } from "@/lib/utils/isEmpty";
 import { sizes } from "@/constants/sizes";
 import { MainHeader } from "../organisms/MainHeader";
 
@@ -16,16 +14,10 @@ const Main = styled("main")({
 type Props = { children: React.ReactNode };
 
 const Layout = ({ children }: Props) => {
-  const arrayBodyComponenets = getChildrenByName(children, "Body");
-  const arrayAbsoluteComponenets = getChildrenByName(children, "Absolute");
-
   return (
     <>
       <MainHeader />
-      <Main>
-        {isEmpty(arrayAbsoluteComponenets) || arrayAbsoluteComponenets}
-        {isEmpty(arrayBodyComponenets) || arrayBodyComponenets}
-      </Main>
+      <Main>{children}</Main>
     </>
   );
 };

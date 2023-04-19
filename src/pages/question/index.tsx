@@ -4,21 +4,22 @@ import { Stack, TextField, Typography } from "@mui/material";
 import { InputUploadImage } from "@/components/organisms/InputUploadImage";
 import { useWindowScreen } from "@/hooks/useWindowScreen";
 import { Empty } from "@/components/atoms";
+import { MainTextField } from "@/components/atoms";
 
 export default function Question() {
   const [uploadedFile, setUploadedFile] = React.useState<File | null>(null);
-  const { screen } = useWindowScreen();
+  const { windowScreen } = useWindowScreen();
 
   return (
     <MainLayout>
-      {/* [Todo] Head 컴포넌트 관리하기 */}
       <MainLayout.Body>
         {/* [Todo] Field 컴포넌트로 빼기 */}
         <Stack sx={{ width: "90%" }} spacing={2}>
+          <Empty height="0.1rem" />
           <Typography variant="h3">질문 내용</Typography>
-          <TextField sx={{ width: "100%" }} />
+          <MainTextField multiline rows={8} placeholder="질문 내용을 입력해주세요." />
           <InputUploadImage
-            screen={screen}
+            screen={windowScreen}
             uploadedFile={uploadedFile}
             setUploadedFile={setUploadedFile}
           />

@@ -9,6 +9,7 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <EmotionCacheProvider>
       <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>{texts.headTitle}</title>
       </Head>
       <MuiThemeProvider>
