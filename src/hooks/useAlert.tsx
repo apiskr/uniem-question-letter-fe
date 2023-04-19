@@ -1,6 +1,6 @@
 import React from "react";
 import { createPortal } from "react-dom";
-import { AppAlert } from "@/components/molecules/AppALert";
+import { AppAlert } from "@/components/molecules/AppAlert";
 import { AlertColor } from "@mui/material/Alert";
 
 // [Todo] NextJS에서 createPortal?
