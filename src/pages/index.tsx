@@ -198,7 +198,7 @@ export default function Home() {
               <p
                 style={{
                   margin: "0",
-                  color: "#ffffff",
+                  // color: "#ffffff",
 
                   // body1B
                   fontSize: "15px",
@@ -213,7 +213,7 @@ export default function Home() {
                 style={{
                   margin: "0",
 
-                  color: "#ffffff",
+                  // color: "#ffffff",
 
                   // body1R
                   fontSize: "15px",
@@ -228,7 +228,7 @@ export default function Home() {
               <p
                 style={{
                   margin: "0",
-                  color: "#ffffff",
+                  // color: "#ffffff",
 
                   // body1R
                   fontSize: "15px",
@@ -244,7 +244,7 @@ export default function Home() {
                 style={{
                   margin: "0",
 
-                  color: "#ffffff",
+                  // color: "#ffffff",
 
                   // body1R
                   fontSize: "15px",
@@ -263,7 +263,7 @@ export default function Home() {
               <p
                 style={{
                   margin: "0",
-                  color: "#ffffff",
+                  // color: "#ffffff",
                   // body1R
                   fontSize: "15px",
                   lineHeight: "18px",
@@ -275,7 +275,7 @@ export default function Home() {
               <p
                 style={{
                   margin: "0",
-                  color: "#ffffff",
+                  // color: "#ffffff",
                   // body1R
                   fontSize: "15px",
                   lineHeight: "18px",
@@ -290,7 +290,7 @@ export default function Home() {
                 style={{
                   margin: "0",
 
-                  color: "#ffffff",
+                  // color: "#ffffff",
 
                   // body1R
                   fontSize: "15px",
@@ -306,7 +306,7 @@ export default function Home() {
                 style={{
                   margin: "0",
 
-                  color: "#ffffff",
+                  // color: "#ffffff",
 
                   // body1R
                   fontSize: "15px",
@@ -322,7 +322,7 @@ export default function Home() {
                 style={{
                   margin: "0",
 
-                  color: "#ffffff",
+                  // color: "#ffffff",
 
                   // body1R
                   fontSize: "15px",
