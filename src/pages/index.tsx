@@ -182,7 +182,7 @@ export default function Home() {
               width: "100%",
               height: "100%",
               // Gray4
-              background: "#000",
+              backgroundColor: "#000",
               gap: 2,
             }}
           >
