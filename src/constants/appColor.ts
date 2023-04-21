@@ -1,21 +1,21 @@
 const originColor = {
-  grey1: "#F2F2F2",
-  grey2: "#c8c8c8",
-  grey3: "#333333",
-  grey4: "#222222",
-  greyTransparent: "rgb(34,34,34,0.5)",
+  gray1: "#F4F4FF",
+  gray2: "#CED5F2",
+  gray3: "#7B83A9",
+  gray4: "#141414",
+  // greyTransparent: "rgb(34,34,34,0.5)",
   white: "#FFFFFF",
   black: "#000000",
-  greyBlue: "#4C5A67",
-  lightPurple1: "#F4F4FF",
-  lightPurple2: "#CED5F2",
+  mainBlue: "#6D94EB",
+  mainGreen: "#6BD989",
 };
 
 export const appColor = {
   ...originColor,
   backGround: originColor.white,
-  inputBackground: originColor.lightPurple1,
-  border: originColor.lightPurple2,
-  text: originColor.grey3,
-  primary: originColor.lightPurple2,
+  inputBackground: originColor.gray1,
+  border: originColor.gray2,
+  text: originColor.gray4,
+  textSecondary: originColor.gray3,
+  primary: originColor.mainBlue,
 };
