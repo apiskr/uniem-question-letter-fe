@@ -25,7 +25,7 @@ export const QnATextField = ({ ...props }: Props) => {
         "&:hover, &:focus-within": {
           outline: `2px solid ${appColor.border}`,
         },
-        padding: "1rem",
+        padding: "0.5rem",
         display: "flex",
         flexDirection: "column",
       }}
