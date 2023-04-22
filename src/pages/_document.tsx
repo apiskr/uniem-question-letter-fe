@@ -102,3 +102,22 @@ MyDocument.getInitialProps = async (ctx: DocumentContext) => {
     emotionStyleTags,
   };
 };
+
+// [Error] 이거 되는 건지 모르겠으
+// MyDocument.getInitialProps = async (ctx: any) => {
+//   const materialSheets = new ServerStyleSheets();
+//   const originalRenderPage = ctx.renderPage;
+
+//   ctx.renderPage = () =>
+//     originalRenderPage({
+//       enhanceApp:
+//         (App: React.ComponentType<React.ComponentProps<AppType> & MyAppProps>) => (props: any) =>
+//           materialSheets.collect(<App {...props} />),
+//     });
+
+//   const initialProps = await Document.getInitialProps(ctx);
+//   return {
+//     ...initialProps,
+//     styles: <>{initialProps.styles}</>,
+//   };
+// };

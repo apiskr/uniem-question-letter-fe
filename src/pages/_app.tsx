@@ -5,17 +5,22 @@ import { MuiThemeProvider } from "@/providers/MuiThemeProvider";
 import { theme } from "@/providers/MuiThemeProvider";
 import { EmotionCacheProvider } from "@/providers/EmotionCacheProvider";
 import { texts } from "@/constants/text";
+import { EmotionCache } from "@emotion/cache";
 
-export default function App({ Component, pageProps }: AppProps) {
+export interface MyAppProps extends AppProps {
+  emotionCache?: EmotionCache;
+}
+
+export default function App({ Component, emotionCache, pageProps }: MyAppProps) {
   return (
-    <EmotionCacheProvider>
+    <EmotionCacheProvider value={emotionCache}>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta title="uniem" name="description" content={texts.headTitle} />
         {/* <link rel="shortcut icon" href="/favicon.ico" /> */}
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content={theme.palette.primary.main} />
-        <meta name="emotion-insertion-point" content="" />
+        {/* <meta name="emotion-insertion-point" content="" /> */}
       </Head>
       <MuiThemeProvider>
         <Component {...pageProps} />
