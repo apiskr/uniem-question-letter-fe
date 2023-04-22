@@ -10,6 +10,5 @@ export const configTypography: TypographyOptions = {
     fontSize: 16,
     letterSpacing: "1px",
   },
-  body2: { fontSize: 12, fontWeight: 500 },
-  button: { fontSize: 16, letterSpacing: "1px", color: appColor.white },
+  body2: { fontSize: 12, fontWeight: 400, color: appColor.textSecondary },
 };
