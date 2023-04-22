@@ -12,6 +12,7 @@ import { texts } from "@/constants/text";
 import createEmotionCache from "@/providers/EmotionCacheProvider/createEmotionCache";
 import { EmotionCache } from "@emotion/cache";
 import { theme } from "@/providers/MuiThemeProvider";
+import { ServerStyleSheets } from "@mui/styles";
 
 interface MyDocumentProps extends DocumentProps {
   emotionStyleTags: JSX.Element[];
@@ -71,13 +72,12 @@ MyDocument.getInitialProps = async (ctx: DocumentContext) => {
   // You can consider sharing the same Emotion cache between all the SSR requests to speed up performance.
   // However, be aware that it can have global side effects.
   const cache = createEmotionCache();
+  // 서버사이드 랜더링 시 할당된 스타일 객체를 스타일 오브젝트 객체에 입힘
   const { extractCriticalToChunks } = createEmotionServer(cache);
 
   ctx.renderPage = () =>
     originalRenderPage({
-      enhanceApp: (
-        App: React.ComponentType<React.ComponentProps<AppType> & MyAppProps>
-      ) =>
+      enhanceApp: (App: React.ComponentType<React.ComponentProps<AppType> & MyAppProps>) =>
         function EnhanceApp(props) {
           return <App emotionCache={cache} {...props} />;
         },
@@ -87,6 +87,7 @@ MyDocument.getInitialProps = async (ctx: DocumentContext) => {
   // This is important. It prevents Emotion to render invalid HTML.
   // See https://github.com/mui/material-ui/issues/26561#issuecomment-855286153
   const emotionStyles = extractCriticalToChunks(initialProps.html);
+  // 스타일을 파싱해서 매핑
   const emotionStyleTags = emotionStyles.styles.map((style) => (
     <style
       data-emotion={`${style.key} ${style.ids.join(" ")}`}
