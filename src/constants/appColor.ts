@@ -13,7 +13,7 @@ const originColor = {
 export const appColor = {
   ...originColor,
   backGround: originColor.white,
-  inputBackground: originColor.gray1,
+  backgroundSecondary: originColor.gray1,
   border: originColor.gray2,
   text: originColor.gray4,
   textSecondary: originColor.gray3,
